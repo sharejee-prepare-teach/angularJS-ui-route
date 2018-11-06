@@ -42,5 +42,10 @@ public class TemplateController {//Serves Templates.
     	return "template/category_printers_detail";	
     }
 
+    @RequestMapping(value = "/pchome")
+    public String toPCHome(){
+        return "template/pchome";
+    }
+
 }
 

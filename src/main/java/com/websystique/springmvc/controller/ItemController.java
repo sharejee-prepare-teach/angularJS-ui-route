@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.websystique.springmvc.service.ItemService;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class ItemController {//Serves Data.
@@ -82,6 +83,17 @@ public class ItemController {//Serves Data.
     public ResponseEntity<Object> findSpecificPrinter(@PathVariable("id") long id) {
 		System.out.println("*************************************findSpecificPrinter");
     	Object item = 	itemService.findItemById(id, "printers");
+        if(item == null){
+            return new ResponseEntity<Object>(HttpStatus.NO_CONTENT);//You many decide to return HttpStatus.NOT_FOUND
+        }
+        return new ResponseEntity<Object>(item, HttpStatus.OK);
+    }
+
+    @RequestMapping(value="/pchomes")
+    @ResponseBody
+    public ResponseEntity<Object> listPersonList() {
+        System.out.println("*************************************findAllPCs");
+        Object item = 	itemService.findAllPCs();
         if(item == null){
             return new ResponseEntity<Object>(HttpStatus.NO_CONTENT);//You many decide to return HttpStatus.NOT_FOUND
         }

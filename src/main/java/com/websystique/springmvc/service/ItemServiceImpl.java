@@ -76,7 +76,12 @@ public class ItemServiceImpl implements ItemService{
 		return allCategories;
 	}
 
-	
+	@Override
+	public List<Computer> findAllPCs() {
+		return populateDummyComputers();
+	}
+
+
 	private static List<Computer> populateDummyComputers(){
 		List<Computer> computers = new ArrayList<Computer>();
 		

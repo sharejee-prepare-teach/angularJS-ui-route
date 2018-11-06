@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <title>PCHome</title>
+    <link rel="stylesheet" href="resources/css/bootstrap.css" />
+    <link rel="stylesheet" href="resources/css/app.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+    <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.11/ng-grid.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.11/ng-grid.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.11/ng-grid.min.js"></script>
+    <script src="resources/js/app.js"></script>
+</head>
+<body ng-controller="PCController">
+<h1>pc home</h1>
+<!--<table border="1">
+         <tr>
+             <th>ID</th>
+             <th>Brand</th>
+             <th>Model</th>
+             <th>State</th>
+             <th>Edit</th>
+             <th>Action</th>
+         </tr>
+         &lt;!&ndash; $scope.students &ndash;&gt;
+         <tr ng-repeat="pc in pcs">
+            <td> {{ pc.id }}</td>
+            <td> {{ pc.brand }}</td>
+            <td >{{ pc.model }}</td>
+            <td >{{ pc.state }}</td>
+            <td>
+            <a ng-click="editStudent(student)" class="btn btn-warning">Edit</a>
+            </td>
+            <td>
+            <a ng-click="deleteStudent(student)" class="btn btn-danger">Delete</a>
+            </td>
+         </tr>
+      </table>-->
+<div class="gridStyle" ng-grid="gridOptions"></div>
+</body>
+</html>
